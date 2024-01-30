@@ -1,6 +1,6 @@
 let searchBtn = document.querySelector("#searchBtn");
 let searchUser = document.querySelector("#searchUser");
-let profile = document.querySelector("#profile");
+let ui = new UI;
 
 searchBtn.addEventListener("click", function handleClick(e) {
     let userText = searchUser.value;
@@ -9,13 +9,17 @@ searchBtn.addEventListener("click", function handleClick(e) {
     // }
     // else(alert("Empty"));
     fetch(`https://api.github.com/users/${userText}`)
-        .then(fetchedData => fetchedData.json())
+        .then(result => result.json())
         .then(fetchedData => {
             if (fetchedData.message == "Not Found") {
                 alert("User Not found")
             }
             else {
-                alert(JSON.stringify(fetchedData))
+                // alert(JSON.stringify(fetchedData))
+                // document.getElementById("profile").innerHTML = `${JSON.stringify(fetchedData)}`;
+                ui.showProfile(fetchedData);
             }
+
         })
+
 });
