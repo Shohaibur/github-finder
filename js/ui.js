@@ -1,10 +1,10 @@
 class UI {
-    constructor() {
-        this.profile = document.querySelector("#profile");
-    }
-    showProfile(user) {
-       // this.clearAlert();
-        this.profile.innerHTML = `
+  constructor() {
+    this.profile = document.querySelector("#profile");
+  }
+  showProfile(user) {
+    // this.clearAlert();
+    this.profile.innerHTML = `
         <div class="card card-body mb-3">
         <div class="row">
           <div class="col-md-3">
@@ -27,6 +27,10 @@ class UI {
         </div>
       </div>
         `;
-    }
-    
+  }
+  resetUI(whatever){
+    this.profile.innerHTML ="";
+  }
+
+
 }

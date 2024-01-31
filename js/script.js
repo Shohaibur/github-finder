@@ -1,5 +1,6 @@
 let searchBtn = document.querySelector("#searchBtn");
 let searchUser = document.querySelector("#searchUser");
+let homeBtn = document.querySelector(".navbar-brand");
 let ui = new UI;
 
 searchBtn.addEventListener("click", function handleClick(e) {
@@ -19,7 +20,11 @@ searchBtn.addEventListener("click", function handleClick(e) {
                 // document.getElementById("profile").innerHTML = `${JSON.stringify(fetchedData)}`;
                 ui.showProfile(fetchedData);
             }
-
         })
+    },
+    homeBtn.addEventListener("click", function handleClick(e){
+        searchUser.value = "";
+        ui.resetUI()
 
-});
+    })
+    );
