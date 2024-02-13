@@ -13,7 +13,7 @@ searchBtn.addEventListener("click", function handleClick(e) {
         .then(result => result.json())
         .then(fetchedData => {
             if (fetchedData.message == "Not Found") {
-                alert("User Not found")
+                ui.showAlert();
             }
             else {
                 // alert(JSON.stringify(fetchedData))

@@ -28,9 +28,18 @@ class UI {
       </div>
         `;
   }
+  showAlert(){
+    this.profile.innerHTML=`
+    <div class="alert alert-danger" role="alert">
+  User not found, Try Again
+</div>` ;
+ }
+
+
   resetUI(whatever){
     this.profile.innerHTML ="";
   }
+
 
 
 }
