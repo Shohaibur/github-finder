@@ -3,6 +3,7 @@ let searchUser = document.querySelector("#searchUser");
 let homeBtn = document.querySelector(".navbar-brand");
 let ui = new UI;
 
+
 searchBtn.addEventListener("click", function handleClick(e) {
     let userText = searchUser.value;
     // if (userText!=""){
@@ -27,5 +28,6 @@ searchBtn.addEventListener("click", function handleClick(e) {
         ui.resetUI()
 
     })
+    
     
 );
