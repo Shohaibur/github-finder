@@ -21,10 +21,11 @@ searchBtn.addEventListener("click", function handleClick(e) {
                 ui.showProfile(fetchedData);
             }
         })
-    },
-    homeBtn.addEventListener("click", function handleClick(e){
+},
+    homeBtn.addEventListener("click", function handleClick(e) {
         searchUser.value = "";
         ui.resetUI()
 
     })
-    );
+    
+);
